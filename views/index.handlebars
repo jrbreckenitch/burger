@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-sm-6">
             <p class="header">Burgers Da Eat</p>
-            {{#each burgers}}
+            {{#each burger}}
                 {{#unless this.devoured }}
                     
                     <form action="burgers/update/{this.id}"?_method="PUT" method="POST">
@@ -17,7 +17,7 @@
         </div>
         <div class="col-sm-6">
             <p class="header">Burgers Devoured</p>
-            {{#each burgers}}
+            {{#each burger}}
                 {{#if this.devoured}}
                 <p>
                     {{this.burger_name}}
