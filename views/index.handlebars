@@ -1,22 +1,22 @@
-<p>Eat-Da-Burger!</p>
+<p id="title">Eat-Da-Burger!</p>
 
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-            <p>Burgers Da Eat</p>
+            <p class="header">Burgers Da Eat</p>
             {{#each burger}}
                 {{#unless this.devoured }}
-                    <p>{{this.burger_name}}
+                    
                     <form action="burgers/update/{this.id}"?_method="PUT" method="POST">
+                        <label>{{ this.burger_name }}</label>
                         <input type="hidden" name="eatup" value="true">
                         <button type="submit" class="btn">Eat up!</button>
                     </form>
-                    </p>
                 {{/unless}}
             {{/each}}
         </div>
         <div class="col-sm-6">
-            <p>Burgers Devoured</p>
+            <p class="header">Burgers Devoured</p>
             {{#each burger}}
                 {{#if this.devoured}}
                 <p>
@@ -28,12 +28,13 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <p>Create a New Burger!</p>
             <form action="burgers/create" method="POST">
                 <div class="form-group">
-                    <label for="burger">New Burger</label>
+                    <label for="burger" class="header">Create a New Burger!</label>
                     {{!-- <input type="text" id="newBurger" name="name"> --}}
                     <textarea class="form-control input-group" aria-label="With textarea"></textarea>
+                    <br>
+                    <button type="submit" class="btn">Create!</button>
                 </div>
             </form>
         </div>

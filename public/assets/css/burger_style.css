@@ -1,4 +1,19 @@
 body {
-    background-color: green;
+    background-color: yellow;
+    font-size: 1.5em;
 }
 
+button {
+    background-color: red;
+}
+
+#title {
+    text-align: center;
+    /* align-content: center; */
+    font-size: 3.5em;
+}
+
+.header {
+    font-size: 2em;
+    text-decoration: underline;
+}
